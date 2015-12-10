@@ -1,14 +1,15 @@
 import {Hero} from './hero';
+export function main() {
+    describe('Hero', () => {
 
-describe('Hero', () => {
+        it('has name given in the constructor', () => {
+            let hero = new Hero(1, 'Super Cat');
+            expect(hero.name).toEqual('Super Cat');
+        });
 
-  it('has name given in the constructor', () => {
-    let hero = new Hero(1, 'Super Cat');
-    expect(hero.name).toEqual('Super Cat');
-  });
-
-  it('has id given in the constructor', () => {
-    let hero = new Hero(1, 'Super Cat');
-    expect(hero.id).toEqual(1);
-  });
-})
+        it('has id given in the constructor', () => {
+            let hero = new Hero(1, 'Super Cat');
+            expect(hero.id).toEqual(1);
+        });
+    });
+}
