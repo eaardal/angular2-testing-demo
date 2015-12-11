@@ -3,22 +3,18 @@ module.exports = function(config) {
         basePath: '',
         frameworks: ['jasmine'],
         files: [
+            // Thirdparty dependencies
             'node_modules/systemjs/dist/system-polyfills.js',
             'node_modules/systemjs/dist/system.src.js',
             'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-            //'node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
-            //'node_modules/jasmine-core/lib/jasmine-core/boot.js',
-            //'node_modules/angular2/bundles/angular2.dev.js',
-            //'src/test-bootstrapper.js',
+            // Specs
             'src/app/foo.spec.ts'
-            //'src/testrunner.js'
         ],
         exclude: [],
         preprocessors: {
             'src/app/**/*.ts': ['typescript']
         },
         typescriptPreprocessor: {
-            // options to the typescript compiler
             options :{
                 "target": "ES5",
                 "module": "commonjs",
