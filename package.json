@@ -1,23 +1,26 @@
 {
   "name": "angular2-testing-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A prototype of unit testing using Angular 2, TypeScript, Karma, and Jasmine",
   "main": "index.js",
-  "scripts": {
-    "tsc": "tsc -p src -w",
-    "start": "live-server --open=src",
-    "test": "live-server --open=src/unit-tests.html"
-  },
+  "scripts": { },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular2": "2.0.0-alpha.44",
     "systemjs": "0.19.2"
   },
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-exec": "^0.4.6",
+    "grunt-karma": "^0.12.1",
     "jasmine-core": "2.4.1",
-    "live-server": "^0.8.2",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.2.2",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "karma-typescript-preprocessor": "0.0.21",
+    "phantomjs": "^1.9.19",
     "typescript": "^1.7.3"
   }
 }

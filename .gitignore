@@ -26,8 +26,10 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
+# Ignore application javascript files - always compile typescript files
 src/app/**/*.js
 src/app/**/*.js.map
 src/dist
 
+# Ignore typings - always generate from "tsd install" command
 src/typings
