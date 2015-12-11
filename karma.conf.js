@@ -5,13 +5,13 @@ module.exports = function(config) {
         files: [
             'node_modules/systemjs/dist/system-polyfills.js',
             'node_modules/systemjs/dist/system.src.js',
-            'node_modules/jasmine-core/lib/jasmine-core.js',
+            'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
             //'node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js',
             //'node_modules/jasmine-core/lib/jasmine-core/boot.js',
             //'node_modules/angular2/bundles/angular2.dev.js',
-            'src/test-bootstrapper.js',
-            'src/app/hero.ts',
-            'src/app/hero.spec.ts'
+            //'src/test-bootstrapper.js',
+            'src/app/foo.spec.ts'
+            //'src/testrunner.js'
         ],
         exclude: [],
         preprocessors: {

@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         exec: {
-            compileTypeScript: 'tsc -p src'
+            compileTypeScript: 'tsc'
         },
         karma: {
             unit: {
