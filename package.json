@@ -1,11 +1,9 @@
 {
   "name": "angular2-testing-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A prototype of unit testing using Angular 2, TypeScript, Karma, and Jasmine",
   "main": "index.js",
-  "scripts": {
-    "tsc": "tsc -p src -w"
-  },
+  "scripts": { },
   "keywords": [],
   "author": "",
   "license": "ISC",
