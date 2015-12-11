@@ -1,7 +1,9 @@
 # angular2-testing-demo
 
+Branch _html_: Run tests in src/unit-tests.html
+Branch _karma_: Run tests in Karma
+
 * Install global dependencies: `npm i -g grunt-cli, karma, tsd, typescript`
 * Install libraries: `npm install`
 * Install typings: `tsd install`
-* Start TS compiler watch: `npm run tsc`
-* In new terminal, live reload tests: `npm test`
+* Run tests: `grunt`
