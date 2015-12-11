@@ -16,6 +16,7 @@ meta: {
     }
 }
 */
+/*
 Promise.all(
     Object.keys(window.__karma__.files) // All files served by Karma.
     .filter(onlySpecFiles)
@@ -58,7 +59,7 @@ function file2moduleName(filePath) {
         // module name should not have a suffix
         .replace(/\.\w*$/, '');
 }
-/*
+
 Promise.all([
         System.import('app/hero'),
         System.import('app/hero.spec'),
