@@ -9,6 +9,6 @@
         "noImplicitAny": false
     },
     "files": [
-        "src/app/foo.spec.ts"
+        "src/app/smoke.spec.ts"
     ]
 }

@@ -1,7 +1,10 @@
 /// <reference path="../typings/tsd.d.ts" />
 
-describe('smoke test', function() {
-	it('true to be true', function(){
-		expect(true).toBe(true);
+import {Foo} from './foo';
+
+describe('Foo', () => {
+	it('hi should return hello', () => {
+		var foo = new Foo();
+		expect(foo.greeting).toBe('hello');
 	});
 });

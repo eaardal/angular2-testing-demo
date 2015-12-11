@@ -7,8 +7,15 @@ module.exports = function(config) {
             'node_modules/systemjs/dist/system-polyfills.js',
             'node_modules/systemjs/dist/system.src.js',
             'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
+            
+            'src/app/foo.ts',
+            // Test bootstrapper
+            'src/test-bootstrapper.js',
+            // App
+            
             // Specs
-            'src/app/foo.spec.ts'
+            'src/app/smoke.spec.ts',
+            'src/app/foo.spec.ts',            
         ],
         exclude: [],
         preprocessors: {

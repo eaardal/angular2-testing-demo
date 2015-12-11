@@ -15,5 +15,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('default', ['exec:compileTypeScript', 'karma:unit']);
+    grunt.registerTask('default', ['karma:unit']);
 };
