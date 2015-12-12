@@ -1,23 +1,24 @@
 module.exports = function(config) {
     config.set({
         basePath: '',
-        frameworks: ['jasmine'],
-        files: [
-            // Thirdparty dependencies
-            'node_modules/systemjs/dist/system-polyfills.js',
-            'node_modules/systemjs/dist/system.src.js',
-            'node_modules/jasmine-core/lib/jasmine-core/jasmine.js',
-            
-            'src/app/foo.ts',
-            // Test bootstrapper
-            'src/test-bootstrapper.js',
-            // App
-            
-            // Specs
-            'src/app/smoke.spec.ts',
-            'src/app/foo.spec.ts',            
+        frameworks: ['jasmine', 'systemjs'],
+        plugins: [
+            'karma-chrome-launcher',
+            'karma-coverage',
+            'karma-jasmine',
+            'karma-phantomjs-launcher',
+            'karma-typescript-preprocessor',
+            'karma-systemjs'
         ],
-        exclude: [],
+        //files: [], // Loaded through systemjs
+        //exclude: [],     
+        reporters: ['progress'],
+        port: 9876,
+        colors: true,
+        logLevel: config.LOG_DEBUG,
+        autoWatch: false,
+        browsers: ['Chrome'],
+        singleRun: true,
         preprocessors: {
             'src/app/**/*.ts': ['typescript']
         },
@@ -38,12 +39,21 @@ module.exports = function(config) {
                 return path.replace(/\.ts$/, '.js');
             }
         },
-        reporters: ['progress'],
-        port: 9876,
-        colors: true,
-        logLevel: config.LOG_INFO,
-        autoWatch: false,
-        browsers: ['PhantomJS'],
-        singleRun: false
+        systemjs: {
+            baseUrl: '',
+            configFile: 'src/system.conf.js',
+            //includeFiles: [ ],
+            // Thirdparty libraries:
+            serveFiles: [
+                'src/app/**/*.js'    
+            ],
+
+            // Test-context specific configuration, loaded after systemjs.conf.js
+            //config: {
+              //  paths: {
+
+                //}
+            //}  
+        }
     });
 };
